@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Scripts-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
+    <script src="posts.js"></script>
+    <script src="main.js"></script>
+    <script src="utilities.js"></script>
+
+    <!-- Styles -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+
+    <title>Drew Kopp</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="side-column">
+
+            <!-- Left column content -->
+
+            <div class="left-hand-menu">
+                <div class="side-column-menu">
+
+                    <hr>
+                    </hr>
+
+                    <h2>Drew Kopp</h2>
+
+                    <p id="role-text">Artist</p>
+
+                    <hr>
+                    </hr>
+
+                    <p>Pennsylvania State University</p>
+                    <p>State College, PA</p>
+
+                    <hr>
+                    </hr>
+
+                    <p>drewellisk@gmail.com</p>
+                    <li><a href="https://www.instagram.com/drewkoppp/">instagram</a></li>
+                    <li><a href="KoppDrewResume.jpg" target="_blank" id="resume-link">resume</a></li>
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Main Content -->
+
+        <div class="main-content">
+            <hr>
+            </hr>
+
+            <div class="main-content-header">
+                <p>I am Drew — an artist, developer, and writer based in State College, PA, currently
+                    studying at Pennsylvania State University.</p>
+                <p>This space showcases a portfolio of my diverse projects,
+                    where creativity meets technology across various mediums.</p>
+                <p>Feel free to explore and discover
+                    the range of my work. For collaborations or inquiries, please reach out at drewellisk@gmail.com.
+                </p>
+            </div>
+
+
+            <div class="main-content-subheader">
+                <hr>
+                </hr>
+                <p>-- recent posts --</p>
+                <hr>
+                </hr>
+            </div>
+
+            <hr>
+            </hr>
+
+            <div class="main-content-container">
+
+            </div>
+        </div>
+
+        <!-- Right column content -->
+
+        <div class="side-column">
+
+            <div class="side-column-menu">
+
+                <hr>
+                </hr>
+
+                <ul>
+                    <li><a href="#home" id="home-link">home</a></li>
+                    <hr>
+                    </hr>
+                    <li><a href="#blog">general blog</a></li>
+                    <hr>
+                    </hr>
+                    <li><a href="#graphic_novel">graphic novel -- capstone project</a></li>
+                    <hr>
+                    </hr>
+                    <li><a href="#coding">coding</a></li>
+                    <hr>
+                    </hr>
+                    <li><a href="#photography">photography</a></li>
+                    <hr>
+                    <li><a href="#photo_blog">photo blog</a></li>
+                    <hr>
+                    </hr>
+                    <li><a href="#past_projects">past projects...</a></li>
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <p style="margin-right: 10px;">© 2023</p>
+            <button id="mode-toggle-btn">☼</button>
+        </div>
+    </footer>
+
+    <div id="ascii-wave"></div>
+
+    <!-- Modal for resume -->
+
+    <div id="resume-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="images/KoppDrewResume.jpg" alt="Resume" class="modal-image">
+        </div>
+    </div>
+
+</body>
+
+</html>

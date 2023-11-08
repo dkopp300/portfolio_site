@@ -1,0 +1,578 @@
+@media (max-width: 768px) {
+
+    .main-content,
+    .side-column {
+        width: 100%;
+        /* stack columns on smaller screens */
+
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .main-content,
+    .side-column {
+        width: 50%;
+        /* Adjust the width of the main content and side column to occupy half the screen each */
+    }
+
+    h1 {
+        font-size: x-large;
+        /* Reduce the font size of h1 for better visibility */
+    }
+
+    .container {
+        padding: 1rem;
+        /* Add padding to the container to prevent content from touching the edges */
+    }
+}
+
+@media (max-width: 1440px) {
+    .main-content {
+        width: 60%;
+        /* Increase the width of the main content to occupy a more substantial portion of the screen */
+    }
+
+    .side-column {
+        width: 40%;
+        /* Adjust the width of the side column to complement the main content width */
+    }
+
+    h1,
+    h2 {
+        font-size: larger;
+        /* Increase the font size of h1 and h2 to be more visually appealing on larger screens */
+    }
+
+    .container {
+        padding: 2rem;
+        /* Increase padding in the container for better spacing on larger screens */
+    }
+}
+
+/* Scrollbar Styling */
+
+::-webkit-scrollbar {
+    width: 0px;
+    /* Hide scrollbar for Chrome, Safari */
+}
+
+
+:root {
+    /* Dark Mode Color Palette */
+    --dark-background: #121212;
+    /* Background color */
+    --dark-foreground: #242424;
+    /* Foreground color for cards or modals */
+    --dark-accent-primary: #bb86fc;
+    /* Primary accent color for important elements and highlights */
+    --dark-accent-secondary: #03DAC6;
+    /* Secondary accent color to complement the primary accent color */
+    --dark-text-primary: #ffffff;
+    /* Primary text color */
+    --dark-text-secondary: #ffffff;
+    /* Secondary text color for less important text */
+    --dark-border: #3c3c3c;
+    /* Border color for separating elements */
+}
+
+
+
+/* Font */
+
+body {
+    font-family: 'Inconsolata', monospace;
+    font-size: .75rem;
+    line-height: 1.15;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body,
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    padding-top: 27px;
+
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    /* Prevents scrolling on the whole page */
+}
+
+
+/* Dark Mode */
+
+body.dark-mode {
+    background-color: var(--dark-background);
+    /* Dark mode background color */
+    color: var(--dark-text-primary);
+    /* Dark mode text color */
+}
+
+
+
+/* Header */
+
+h1 {
+    font-family: 'Inconsolata', monospace;
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: 'Inconsolata', monospace;
+    font-size: .75 rem;
+    line-height: 1;
+}
+
+h3,
+h4,
+h5,
+
+/* Post Header Style */
+
+h6 {
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+body.dark-mode h6 {
+    color: var(--dark-text-primary);
+    /* Dark mode post header color */
+}
+
+/* Paragraphs */
+
+li {
+    font-family: 'Inconsolata', monospace;
+    font-size: .8rem;
+    line-height: 1;
+}
+
+a {
+    font-size: .8rem;
+    color: black;
+    text-decoration: none;
+}
+
+a::after {
+    content: " ↗";
+    color: rgb(255, 0, 0);
+
+}
+
+a.current-page::after {
+    content: " x";
+    color: rgb(0, 0, 255);
+
+}
+
+
+
+body.dark-mode a {
+    color: var(--dark-text-secondary);
+    /* Dark mode link color */
+}
+
+body.dark-mode a::after {
+    color: var(--dark-accent-primary);
+    /* Dark mode link color */
+}
+
+
+body.dark-mode a.current-page::after {
+    color: var(--dark-accent-secondary);
+    /* Dark mode link color */
+}
+
+
+
+
+
+/* Images */
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1%;
+}
+
+
+/* Columns */
+
+
+
+
+.container {
+    display: flex;
+    margin: auto;
+    border-radius: 30px;
+    position: relative;
+    background: white;
+    height: 100vh;
+    width: 90vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    /* Add this to disable vertical scrolling within the container */
+}
+
+
+body.dark-mode .container {
+    background-color: var(--dark-background);
+    /* Dark mode background color */
+}
+
+.side-column,
+.main-content {
+    position: relative;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+
+/* Main Content */
+
+.main-content {
+
+    height: calc(100% - 5%);
+    /* Adjust the height to account for the footer */
+    padding-top: 60px;
+    padding-bottom: 5%;
+    /* Add padding at the bottom equal to the footer's height */
+    overflow-y: auto;
+    /* Allows scrolling within the main content */
+
+    width: 40%;
+
+
+    overflow-y: auto;
+    /* Keep this to allow vertical scrolling within the main content */
+    margin: 0 auto;
+}
+
+body.dark-mode .main-content {
+    background-color: var(--dark-background);
+    /* Dark mode background color */
+}
+
+.main-content-header {
+    text-align: left;
+    position: relative;
+
+    padding-top: 30px;
+    left: 0;
+    right: 0;
+    height: 20vh;
+    margin: auto;
+
+
+}
+
+.main-content-subheader {
+    text-align: center;
+    position: relative;
+    height: 10vh;
+    margin: auto;
+
+
+}
+
+.main-content-container {
+    height: 100%;
+
+
+}
+
+body.dark-mode .main-content-container {
+    background-color: var(--dark-background);
+    /* Dark mode background color */
+}
+
+.main-content hr {
+    width: 100%;
+    max-width: 100%;
+}
+
+body.dark-mode .main-content hr {
+    border-color: #ffffff;
+    /* Dark mode hr color */
+}
+
+
+/* Side Column */
+
+.side-column {
+    width: 30%;
+    max-width: 30%;
+    height: 100%;
+
+    padding-left: 5%;
+    padding-right: 5%;
+
+    margin: 0 auto;
+    /* Add this to center the side column */
+
+    overflow-y: hidden;
+    /* Add this to disable vertical scrolling on the page */
+
+
+}
+
+body.dark-mode.side-column {
+    background-color: var(--dark-border);
+    /* Dark mode background color */
+}
+
+.side-column-menu {
+    padding-top: 60px;
+    position: fixed;
+
+
+}
+
+.side-column-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-column-menu a:hover {
+    font-size: .85rem;
+}
+
+.side-column hr {
+    width: 100%;
+    max-width: 100%;
+}
+
+body.dark-mode.side-column hr {
+    border-color: var(--dark-border);
+    /* Dark mode hr color */
+}
+
+/* Glitch Text */
+
+
+.glitch {
+    position: relative;
+    color: black;
+    /* Adjust color according to your preference */
+    animation: glitch 500ms steps(20) infinite;
+}
+
+@keyframes glitch {
+    0% {
+        clip-path: inset(79% 0% 12% 0%);
+        transform: skew(2.45deg);
+    }
+
+    5% {
+        clip-path: inset(92% 0% 24% 0%);
+        transform: skew(38.96deg);
+    }
+
+    10% {
+        clip-path: inset(40% 0% 40% 0%);
+        transform: skew(34.8deg);
+    }
+
+    15% {
+        clip-path: inset(95% 0% 66% 0%);
+        transform: skew(14.08deg);
+    }
+
+    20% {
+        clip-path: inset(58% 0% 2% 0%);
+        transform: skew(47.97deg);
+    }
+
+    25% {
+        clip-path: inset(34% 0% 12% 0%);
+        transform: skew(43.73deg);
+    }
+
+    30% {
+        clip-path: inset(95% 0% 11% 0%);
+        transform: skew(21.8deg);
+    }
+
+    40% {
+        transform: translate(5px, -5px);
+    }
+
+    60% {
+        transform: translate(-5px, 5px);
+    }
+
+    80% {
+        transform: translate(5px, -5px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+/* Footer */
+
+
+footer {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+    text-align: center;
+    background-color: rgba(255, 255, 255);
+
+
+}
+
+
+body.dark-mode footer {
+    background-color: var(--dark-background);
+    /* Dark mode footer background color */
+}
+
+
+/* New button styling using ID selector */
+
+#mode-toggle-btn {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #000;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+}
+
+
+#mode-toggle-btn:hover {
+    opacity: 0.7;
+    /* Removed cursor property here */
+}
+
+#mode-toggle-btn:active {
+    opacity: 0.9;
+}
+
+
+body.dark-mode #mode-toggle-btn {
+    color: var(--dark-text-primary);
+    /* Dark mode color */
+}
+
+
+/* ASCII Wave Animation */
+
+#ascii-wave {
+    margin: 0;
+    padding: 0;
+
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(255, 255, 255);
+    background-color: var(--dark-background);
+
+    white-space: pre;
+
+    font-size: .5rem;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+body.dark-mode #ascii-wave {
+    color: var(--dark-text-primary);
+    /* Dark mode ASCII wave color */
+    background-color: var(--dark-background);
+    /* Dark mode ASCII wave background color */
+}
+
+
+/* Post Style */
+
+.post .media {
+    width: 20%;
+}
+
+/* Modal Style */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 2;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    /* 10% from the top and centered */
+    padding: 20px;
+    width: 100%;
+    /* Could be more or less, depending on screen size */
+    max-width: 700px;
+    /* Maximum width */
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-image {
+    width: 100%;
+    /* Responsive image width */
+    max-height: 80vh;
+    /* Maximum image height */
+    object-fit: contain;
+    /* Keep aspect ratio */
+}
